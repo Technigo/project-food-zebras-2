@@ -1,7 +1,6 @@
-// const restaurants = document.getElementsByClassName('restaurants-container');
+
 const apiData = `https://developers.zomato.com/api/v2.1/search?entity_id=109&entity_type=city&cuisines=143`
 const apiKey = `cbcee325a3269e2c9a64a70beb91d113`
-//Header
 const request = new Request(apiData, {
   headers: new Headers({
     Accept: 'application/json',
@@ -70,5 +69,4 @@ fetch(request)
         restaurantHTML += `</div>`;
       })
       document.getElementById('restaurantsContainer').innerHTML = restaurantHTML;
-    
   })
